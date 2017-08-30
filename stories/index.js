@@ -2,9 +2,7 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
 import { withInfo } from '@storybook/addon-info';
-import { Welcome } from '@storybook/react/demo';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { specs, describe, it } from 'storybook-addon-specifications';
 import backgrounds from '@storybook/addon-backgrounds';
@@ -12,11 +10,8 @@ import Button from '../src/components/Button/Button';
 import { mount } from 'enzyme';
 import expect from 'expect';
 
-storiesOf('Welcome', module).add('to Storybook', () =>
-  <Welcome showApp={linkTo('Button')} />
-);
-
 storiesOf('Button', module)
+  .addDecorator(story => (<div style={{padding: '15px'}}>{story()}</div>))
   .addDecorator(withKnobs)
   .addDecorator(
     backgrounds([
@@ -46,6 +41,15 @@ storiesOf('Button', module)
           it('Should have the Hello Button label', function() {
             let output = mount(story);
             expect(output.text()).toContain('Hello Button');
+          });
+          it('Should fire the click event', () => {
+            const wrapper = mount(story);
+            const onClick = expect.createSpy();
+            wrapper.setProps({ onClick });
+            wrapper.simulate('click');
+
+            expect(onClick).toHaveBeenCalled();
+            wrapper.unmount();
           });
         })
       );
