@@ -1,20 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Button extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const { children, disabled, onClick } = this.props;
-
-    return (
-      <button onClick={onClick} disabled={disabled}>
-        {children}
-      </button>
-    )
-  }
+const Button = (props) => {
+  return (
+    <button onClick={props.onClick} disabled={props.disabled}>
+      {props.children}
+    </button>
+  )
 }
 
 Button.propTypes = {
