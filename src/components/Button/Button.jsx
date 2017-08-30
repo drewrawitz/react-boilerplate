@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { onlyUpdateForKeys } from 'recompose'
 
-const Button = (props) => {
+const Button = onlyUpdateForKeys(['children', 'onClick', 'disabled'])(({ onClick, disabled, children }) => {
   return (
-    <button onClick={props.onClick} disabled={props.disabled}>
-      {props.children}
+    <button onClick={onClick} disabled={disabled}>
+      {children}
     </button>
   )
-}
+})
 
 Button.propTypes = {
   disabled: PropTypes.bool,
