@@ -11,11 +11,11 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    console.log('Home Mounted');
+    // console.log('Home Mounted');
   }
 
   clickButton() {
-    console.log('clicked');
+    // console.log('clicked');
   }
 
   render() {
