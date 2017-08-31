@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
 const pathsHelper = require('./lib/paths-helper');
 
 module.exports = function () {
@@ -15,11 +14,6 @@ module.exports = function () {
     output: {
       filename: '[name].bundle.js',
       path: pathsHelper('dist')
-    },
-    resolveLoader: {
-      alias: {
-        'css-prefix-variables': path.resolve(__dirname, './lib/css-prefix-variables.js')
-      }
     },
     module: {
       rules: [
@@ -52,7 +46,7 @@ module.exports = function () {
               loader: 'babel-loader',
               options: {
                 presets: [
-                  ['es2015', {'loose': true, 'modules': false}],
+                  ['es2015', {'loose': true, 'modules': false}]
                 ]
               }
             }

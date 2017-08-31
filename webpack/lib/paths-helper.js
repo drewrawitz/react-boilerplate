@@ -5,8 +5,7 @@ module.exports = function pathsHelper(a) {
     'base': path.resolve(__dirname, '../../'),
     'components': path.resolve(__dirname, '../../src/components'),
     'dist': path.resolve(__dirname, '../../dist'),
-    'src': path.resolve(__dirname, '../../src'),
-    'variables': path.resolve(__dirname, '../../src/styles/variables.css')
+    'src': path.resolve(__dirname, '../../src')
   };
   return paths[a];
 };

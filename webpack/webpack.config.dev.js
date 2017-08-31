@@ -9,42 +9,7 @@ module.exports = function () {
       publicPath: '/'
     },
     module: {
-      rules: [
-        {
-          test: /\.css$/,
-          use: ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: [
-              'css-loader',
-              {
-                loader: 'postcss-loader',
-                options: {
-                  sourceMap: 'inline',
-                  plugins: function () {
-                    return [
-                      require('postcss-import'),
-                      require('stylelint')(),
-                      require('postcss-reporter')(),
-                      require('postcss-cssnext')({
-                        features: {
-                          autoprefixer: {
-                            grid: false
-                          }
-                        }
-                      }),
-                      require('postcss-nested'),
-                      require('postcss-remove-root'),
-                      require('css-mqpacker')({
-                        sort: true
-                      })
-                    ];
-                  }
-                }
-              }
-            ]
-          })
-        }
-      ]
+      rules: []
     },
     devServer: {
       historyApiFallback: true,

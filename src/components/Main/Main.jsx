@@ -2,15 +2,16 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom'
 import Home from './views/Home.jsx';
 import About from './views/About.jsx';
+import Container from '../Container/Container.jsx';
 
 const Main = () => {
   return (
-    <main id="content" className="wrapper">
+    <Container>
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />
       </Switch>
-    </main>
+    </Container>
   )
 };
 

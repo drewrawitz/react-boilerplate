@@ -1,6 +1,5 @@
 import React from 'react';
 import { addDecorator, configure } from '@storybook/react';
-import backgrounds from '@storybook/addon-backgrounds';
 import { withKnobs } from '@storybook/addon-knobs';
 import { setDefaults } from '@storybook/addon-info';
 
@@ -16,15 +15,6 @@ addDecorator((story) => (
 ));
 
 addDecorator(withKnobs);
-
-addDecorator(
-  backgrounds([
-    { name: 'white', value: '#fff', default: true },
-    { name: 'black', value: '#000' },
-    { name: 'light-gray', value: '#ccc' },
-    { name: 'dark-gray', value: '#999' }
-  ])
-);
 
 const req = require.context('../src/components', true, /.story.js$/);
 

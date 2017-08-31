@@ -5,7 +5,7 @@ import { StyledButton } from './Button.styles.jsx'
 
 const Button = onlyUpdateForKeys(['children', 'onClick', 'disabled'])((props) => {
   return (
-    <StyledButton {...props}>
+    <StyledButton {...props} onClick={props.onClick}>
       {props.children}
     </StyledButton>
   )
