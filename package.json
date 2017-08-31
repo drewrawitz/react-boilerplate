@@ -80,6 +80,7 @@
   "dependencies": {
     "@storybook/addon-backgrounds": "3.0.0",
     "es6-promise": "^4.1.1",
+    "polished": "1.7.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
