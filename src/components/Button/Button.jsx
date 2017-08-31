@@ -1,12 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 import { onlyUpdateForKeys } from 'recompose'
+import { StyledButton } from './Button.styles.jsx'
 
-const Button = onlyUpdateForKeys(['children', 'onClick', 'disabled'])(({ onClick, disabled, children }) => {
+const Button = onlyUpdateForKeys(['children', 'onClick', 'disabled'])((props) => {
   return (
-    <button onClick={onClick} disabled={disabled}>
-      {children}
-    </button>
+    <StyledButton {...props}>
+      {props.children}
+    </StyledButton>
   )
 })
 
@@ -21,3 +22,5 @@ Button.defaultProps = {
 }
 
 export default Button;
+
+Button.displayName = 'Button';
