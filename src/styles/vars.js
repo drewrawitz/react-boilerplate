@@ -2,14 +2,46 @@ const vars = {
 
   /* Colors */
   colors: {
-    pink: '#ff63a6',
-    red: '#f53c20',
-    purple: '#8558b1',
-    orange: '#f47920',
-    green: '#31c903',
-    gray: '#5f5f5f',
-    bluegray: '#6f848f',
-    blue: '#1e7ec1'
+    pink: {
+      name: 'Pink',
+      hex: '#ff63a6',
+      text: '#fff'
+    },
+    red: {
+      name: 'Red',
+      hex: '#f53c20',
+      text: '#fff'
+    },
+    purple: {
+      name: 'Purple',
+      hex: '#8558b1',
+      text: '#fff'
+    },
+    orange: {
+      name: 'Orange',
+      hex: '#f47920',
+      text: '#fff'
+    },
+    green: {
+      name: 'Green',
+      hex: '#31c903',
+      text: '#fff'
+    },
+    gray: {
+      name: 'Gray',
+      hex: '#5f5f5f',
+      text: '#fff'
+    },
+    bluegray: {
+      name: 'Blue-Gray',
+      hex: '#6f848f',
+      text: '#fff'
+    },
+    blue: {
+      name: 'Blue',
+      hex: '#1e7ec1',
+      text: '#fff'
+    }
   },
 
   primaryColor: 'pink',

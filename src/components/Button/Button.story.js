@@ -9,6 +9,14 @@ import expect from 'expect';
 import Button from './Button';
 import vars from '../../styles/vars';
 
+// Create an object of our site-wide colors in a format for our select dropdown
+let colorList = {};
+
+Object.keys(vars.colors).map((val) => {
+  colorList[val] = vars.colors[val].name;
+})
+
+// Create the story
 storiesOf('Button', module).add(
   'Overview',
   withInfo(
@@ -21,13 +29,7 @@ storiesOf('Button', module).add(
         onClick={action('clicked')}
         color={select(
           'Color',
-          {
-            red: 'Red',
-            orange: 'Orange',
-            pink: 'Pink',
-            green: 'Green',
-            blue: 'Blue'
-          },
+          colorList,
           vars.primaryColor
         )}
         size={select(

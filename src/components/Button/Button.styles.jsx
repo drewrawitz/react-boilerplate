@@ -7,9 +7,9 @@ const StyledButton = styled.button`
 	border-radius: ${em(vars.smallBorderRadius)};
 	padding: ${em('10px')} ${em('20px')};
   background: white;
-  color: ${props => props.color && vars.colors[props.color] ? vars.colors[props.color] : vars.colors[vars.primaryColor]};
-	border: ${em('2px')} solid ${vars.colors.pink};
-  border-color: ${props => props.color && vars.colors[props.color] ? vars.colors[props.color] : vars.colors[vars.primaryColor]};
+  color: ${props => props.color && vars.colors[props.color].hex ? vars.colors[props.color].hex : vars.colors[vars.primaryColor].hex};
+	border: ${em('2px')} solid transparent;
+  border-color: ${props => props.color && vars.colors[props.color].hex ? vars.colors[props.color].hex : vars.colors[vars.primaryColor].hex};
   cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
 
   ${props => props.size === 'small' &&`
