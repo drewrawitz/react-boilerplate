@@ -26,6 +26,7 @@ storiesOf('Button', module).add(
       <Button
         disabled={boolean('Disabled', false)}
         full={boolean('Full Width', false)}
+        filled={boolean('Filled', false)}
         onClick={action('clicked')}
         color={select(
           'Color',

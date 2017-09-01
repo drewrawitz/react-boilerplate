@@ -6,11 +6,17 @@ const StyledButton = styled.button`
   display: inline-block;
 	border-radius: ${em(vars.smallBorderRadius)};
 	padding: ${em('10px')} ${em('20px')};
-  background: white;
+  background-color: white;
   color: ${props => props.color && vars.colors[props.color].hex ? vars.colors[props.color].hex : vars.colors[vars.primaryColor].hex};
 	border: ${em('2px')} solid transparent;
   border-color: ${props => props.color && vars.colors[props.color].hex ? vars.colors[props.color].hex : vars.colors[vars.primaryColor].hex};
   cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
+  transition: all 0.3s ease-in-out;
+
+  ${props => props.filled &&`
+    background-color: ${vars.colors[props.color].hex};
+    color: ${vars.colors[props.color].text};
+  `}
 
   ${props => props.size === 'small' &&`
     font-size: 0.8em;

@@ -15,6 +15,7 @@ const Button = onlyUpdateForKeys(['children', 'onClick', 'disabled'])(props => {
 Button.propTypes = {
   disabled: PropTypes.bool,
   full: PropTypes.bool,
+  filled: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium', 'large']).isRequired,
   color: PropTypes.oneOf(Object.keys(vars.colors)).isRequired,
   children: PropTypes.string.isRequired,
@@ -24,6 +25,7 @@ Button.propTypes = {
 Button.defaultProps = {
   disabled: false,
   full: false,
+  filled: false,
   color: vars.primaryColor,
   size: 'medium'
 };
