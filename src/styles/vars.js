@@ -41,6 +41,11 @@ const vars = {
       name: 'Blue',
       hex: '#1e7ec1',
       text: '#fff'
+    },
+    black: {
+      name: 'Black',
+      hex: '#000',
+      text: '#fff'
     }
   },
 

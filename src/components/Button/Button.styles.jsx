@@ -32,6 +32,7 @@ const StyledButton = styled.button`
 
   ${props => props.disabled &&`
     opacity: 0.5;
+    pointer-events: none;
     cursor: not-allowed;
   `}
 

@@ -58,4 +58,4 @@ storiesOf('Button', module).add(
 
     return story;
   })
-);
+)
