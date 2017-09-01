@@ -2,8 +2,14 @@ const vars = {
 
   /* Colors */
   colors: {
-    pink: 'palevioletred',
-    black: '#000'
+    pink: '#ff63a6',
+    red: '#f53c20',
+    purple: '#8558b1',
+    orange: '#f47920',
+    green: '#31c903',
+    gray: '#5f5f5f',
+    bluegray: '#6f848f',
+    blue: '#1e7ec1'
   },
 
   /* Container */

@@ -2,43 +2,56 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
-import { text, boolean } from '@storybook/addon-knobs';
+import { text, boolean, select } from '@storybook/addon-knobs';
 import { specs, describe, it } from 'storybook-addon-specifications';
 import { mount } from 'enzyme';
 import expect from 'expect';
 import Button from './Button';
 
-storiesOf('Button', module)
-  .add(
-    'Overview',
-    withInfo('This is a basic button component used throughout the application.')(() => {
-      const story = (
-        <Button
-          disabled={boolean('Disabled', false)}
-          onClick={action('clicked')}
-        >
-          {text('Label', 'Hello Button')}
-        </Button>
-      );
+storiesOf('Button', module).add(
+  'Overview',
+  withInfo(
+    'This is a basic button component used throughout the application.'
+  )(() => {
+    const story = (
+      <Button
+        disabled={boolean('Disabled', false)}
+        full={boolean('Full Width', false)}
+        onClick={action('clicked')}
+        color={select(
+          'Color',
+          {
+            red: 'Red',
+            orange: 'Orange',
+            pink: 'Pink',
+            green: 'Green',
+            blue: 'Blue'
+          },
+          'red'
+        )}
+        size={select(
+          'Size',
+          {
+            small: 'Small',
+            medium: 'Medium',
+            large: 'Large'
+          },
+          'medium'
+        )}
+      >
+        {text('Label', 'Hello Button')}
+      </Button>
+    );
 
-      specs(() =>
-        describe('Hello Button', function() {
-          it('Should have the Hello Button label', function() {
-            let output = mount(story);
-            expect(output.text()).toContain('Hello Button');
-          });
-          it('Should fire the click event', () => {
-            const wrapper = mount(story);
-            const onClick = expect.createSpy();
-            wrapper.setProps({ onClick });
-            wrapper.simulate('click');
+    specs(() =>
+      describe('Label', function() {
+        it('Should have a label', function() {
+          let output = mount(story);
+          expect(output.text().length > 0).toBe(true);
+        });
+      })
+    );
 
-            expect(onClick).toHaveBeenCalled();
-            wrapper.unmount();
-          });
-        })
-      );
-
-      return story;
-    })
-  );
+    return story;
+  })
+);
