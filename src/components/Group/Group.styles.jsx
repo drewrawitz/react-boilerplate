@@ -21,6 +21,7 @@ const StyledGroup = styled.div`
     justify-content: space-around;
   `}
 
+  align-items: center;
   transition: all 0.3s ease-in-out;
 
   > * {
