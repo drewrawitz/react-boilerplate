@@ -7,6 +7,7 @@ import { specs, describe, it } from 'storybook-addon-specifications';
 import { mount } from 'enzyme';
 import expect from 'expect';
 import Button from './Button';
+import vars from '../../styles/vars';
 
 storiesOf('Button', module).add(
   'Overview',
@@ -27,7 +28,7 @@ storiesOf('Button', module).add(
             green: 'Green',
             blue: 'Blue'
           },
-          'red'
+          vars.primaryColor
         )}
         size={select(
           'Size',

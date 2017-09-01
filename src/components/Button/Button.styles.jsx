@@ -6,11 +6,10 @@ const StyledButton = styled.button`
   display: inline-block;
 	border-radius: ${em(vars.smallBorderRadius)};
 	padding: ${em('10px')} ${em('20px')};
-	margin: 0.5rem 1rem;
   background: white;
-  color: ${props => props.color && vars.colors[props.color] ? vars.colors[props.color] : vars.colors.pink};
+  color: ${props => props.color && vars.colors[props.color] ? vars.colors[props.color] : vars.colors[vars.primaryColor]};
 	border: ${em('2px')} solid ${vars.colors.pink};
-  border-color: ${props => props.color && vars.colors[props.color] ? vars.colors[props.color] : vars.colors.pink};
+  border-color: ${props => props.color && vars.colors[props.color] ? vars.colors[props.color] : vars.colors[vars.primaryColor]};
   cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
 
   ${props => props.size === 'small' &&`
@@ -32,8 +31,6 @@ const StyledButton = styled.button`
 
   ${props => props.full &&`
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
   `}
 `;
 

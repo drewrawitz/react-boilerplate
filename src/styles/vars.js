@@ -12,6 +12,8 @@ const vars = {
     blue: '#1e7ec1'
   },
 
+  primaryColor: 'pink',
+
   /* Container */
   container: '1200px',
 

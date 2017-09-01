@@ -24,7 +24,7 @@ Button.propTypes = {
 Button.defaultProps = {
   disabled: false,
   full: false,
-  color: 'gray',
+  color: vars.primaryColor,
   size: 'medium'
 };
 
