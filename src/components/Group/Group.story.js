@@ -26,20 +26,6 @@ storiesOf('Group', module)
         >
           <Button color="blue">Submit</Button>
           <Button color="red" filled>Delete</Button>
-          <Button color="blue">Submit</Button>
-          <Button color="red" filled>Delete</Button>
-          <Button color="blue">Submit</Button>
-          <Button color="red" filled>Delete</Button>
-          <Button color="blue">Submit</Button>
-          <Button color="red" filled>Delete</Button>
-          <Button color="blue">Submit</Button>
-          <Button color="red" filled>Delete</Button>
-          <Button color="blue">Submit</Button>
-          <Button color="red" filled>Delete</Button>
-          <Button color="blue">Submit</Button>
-          <Button color="red" filled>Delete</Button>
-          <Button color="blue">Submit</Button>
-          <Button color="red" filled>Delete</Button>
         </Group>
       );
 
