@@ -18,7 +18,7 @@ Group.propTypes = {
 
 Group.defaultProps = {
   align: 'left',
-  margin: 10
+  margin: 5
 }
 
 export default Group;

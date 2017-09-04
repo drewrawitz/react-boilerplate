@@ -22,8 +22,22 @@ storiesOf('Group', module)
             },
             'left'
           )}
-          margin={number('Margin', 10)}
+          margin={number('Margin', 5)}
         >
+          <Button color="blue">Submit</Button>
+          <Button color="red" filled>Delete</Button>
+          <Button color="blue">Submit</Button>
+          <Button color="red" filled>Delete</Button>
+          <Button color="blue">Submit</Button>
+          <Button color="red" filled>Delete</Button>
+          <Button color="blue">Submit</Button>
+          <Button color="red" filled>Delete</Button>
+          <Button color="blue">Submit</Button>
+          <Button color="red" filled>Delete</Button>
+          <Button color="blue">Submit</Button>
+          <Button color="red" filled>Delete</Button>
+          <Button color="blue">Submit</Button>
+          <Button color="red" filled>Delete</Button>
           <Button color="blue">Submit</Button>
           <Button color="red" filled>Delete</Button>
         </Group>

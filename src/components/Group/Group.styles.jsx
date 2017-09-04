@@ -22,15 +22,11 @@ const StyledGroup = styled.div`
   `}
 
   align-items: center;
+  margin: ${props => em(-props.margin)};
   transition: all 0.3s ease-in-out;
 
   > * {
-    margin-top: ${props => em(props.margin / 2)};
-    margin-bottom: ${props => em(props.margin / 2)};
-
-    &:not(:last-child) {
-      margin-right: ${props => em(props.margin)};
-    }
+    margin: ${props => em(props.margin)};
   }
 `;
 
