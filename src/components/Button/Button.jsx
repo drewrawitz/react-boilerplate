@@ -5,21 +5,9 @@ import { StyledButton, StyledLink } from './Button.styles.jsx';
 import vars from '../../styles/vars';
 
 const Button = onlyUpdateForKeys(['children', 'onClick', 'href', 'disabled'])(props => {
-  // if an href prop exists, we want to render an <a> tag
-  if(props.href) {
-    return (
-      <StyledLink {...props}>
-        {props.children}
-      </StyledLink>
-    )
-  // if not, let's just render a <button> tag
-  } else {
-    return (
-      <StyledButton {...props}>
-        {props.children}
-      </StyledButton>
-    );
-  }
+  const ButtonWrapper = props.href ? StyledLink : StyledButton;
+
+  return <ButtonWrapper {...props}>{props.children}</ButtonWrapper>;
 });
 
 Button.propTypes = {
