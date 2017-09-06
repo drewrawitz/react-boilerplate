@@ -25,6 +25,10 @@ class Home extends React.Component {
     }, 1000);
   }
 
+  clickButton() {
+    console.log('hi');
+  }
+
   render() {
     return (
       <div>
@@ -34,6 +38,7 @@ class Home extends React.Component {
         <Group>
           <Button color="red" onClick={this.clickButton}>Hello there</Button>
           <Button color="blue" onClick={this.clickButton}>Hello there</Button>
+          <Button href="http://www.google.com" target="_blank" color="purple">Hello there</Button>
         </Group>
 
         <br />

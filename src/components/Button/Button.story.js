@@ -59,3 +59,13 @@ storiesOf('Button', module).add(
     return story;
   })
 )
+.add('Button as a link',
+  withInfo(
+    'Any time an href prop is passed, the button will render an anchor tag instead of a button tag.'
+  )(() => {
+    const story = (
+      <Button href="http://www.google.com" target="_blank">This is an anchor tag</Button>
+    );
+
+    return story;
+  }))

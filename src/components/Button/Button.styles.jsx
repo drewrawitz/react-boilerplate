@@ -38,9 +38,15 @@ const StyledButton = styled.button`
 
   ${props => props.full &&`
     width: 100%;
+    text-align: center;
   `}
 `;
 
+const StyledLink = StyledButton.withComponent('a').extend`
+  text-decoration: none;
+`;
+
 export {
-  StyledButton
+  StyledButton,
+  StyledLink
 }
