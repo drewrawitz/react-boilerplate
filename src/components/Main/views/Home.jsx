@@ -16,13 +16,18 @@ class Home extends React.Component {
   componentDidMount() {
     console.log('Home Mounted');
 
-    setInterval(() => {
+    this.myInterval = setInterval(() => {
       if(this.state.progress <= 100) {
         this.setState({
           progress: this.state.progress + Math.floor(Math.random() * 5) + 1
         })
       }
     }, 1000);
+  }
+
+  componentWillUnmount() {
+    console.log('unmount');
+    clearInterval(this.myInterval);
   }
 
   clickButton() {
