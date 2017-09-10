@@ -14,8 +14,6 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    console.log('Home Mounted');
-
     this.myInterval = setInterval(() => {
       if(this.state.progress <= 100) {
         this.setState({
@@ -26,7 +24,6 @@ class Home extends React.Component {
   }
 
   componentWillUnmount() {
-    console.log('unmount');
     clearInterval(this.myInterval);
   }
 
@@ -47,7 +44,7 @@ class Home extends React.Component {
         </Group>
 
         <br />
-        <ProgressBar completed={this.state.progress} color="blue" />
+        <ProgressBar completed={this.state.progress} color="blue" showText={false} />
       </div>
     )
   }

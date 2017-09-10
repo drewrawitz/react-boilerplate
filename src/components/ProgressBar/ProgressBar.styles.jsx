@@ -15,12 +15,16 @@ const Progress = styled.div`
   background-color: ${props => props.color && vars.colors[props.color].hex ? vars.colors[props.color].hex : vars.colors[vars.primaryColor].hex};
   color: rgba(255, 255, 255, 0.7);
   width: ${props => props.completed > 0 ? props.completed + '%' : 'auto'};
-  height: 100%;
-  padding: 5px;
   text-align: center;
 	border-top-left-radius: ${em(vars.smallBorderRadius)};
 	border-bottom-left-radius: ${em(vars.smallBorderRadius)};
-  transition: width 0.3s ease-in-out;
+  padding: ${em('5px')};
+  transition: width 0.3s linear 0ms;
+
+  ${props => !props.showText &&`
+    height: ${em('4px')};
+    padding: 0;
+  `}
 
   ${props => props.completed >= 100 &&`
   	border-radius: ${em(vars.smallBorderRadius)};

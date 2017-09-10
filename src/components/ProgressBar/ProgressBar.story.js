@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { number, select } from '@storybook/addon-knobs';
+import { number, select, boolean } from '@storybook/addon-knobs';
 import ProgressBar from './ProgressBar';
 import vars from '../../styles/vars';
 
@@ -24,6 +24,7 @@ storiesOf('ProgressBar', module)
             colorList,
             vars.primaryColor
           )}
+          showText={boolean('Show Text', false)}
         />
       );
 
